@@ -55,20 +55,52 @@ gallery:
 
 從晨光到夜色，把路上的風景都收進這一頁。每一張照片都是一次出走的片刻，點開就是當時的溫度與心情。
 
+若你的瀏覽器暫時不支援 HEIC 格式，本頁會嘗試自動轉成可顯示的格式，讓你可以正常瀏覽每張照片。
+
 <figure class="third">
-  <a href="/assets/images/travel/IMG_0074.HEIC"><img src="/assets/images/travel/IMG_0074.HEIC" alt="旅遊照片 1"></a>
-  <a href="/assets/images/travel/IMG_0104.HEIC"><img src="/assets/images/travel/IMG_0104.HEIC" alt="旅遊照片 2"></a>
-  <a href="/assets/images/travel/IMG_0286.HEIC"><img src="/assets/images/travel/IMG_0286.HEIC" alt="旅遊照片 3"></a>
-  <a href="/assets/images/travel/IMG_0554.HEIC"><img src="/assets/images/travel/IMG_0554.HEIC" alt="旅遊照片 4"></a>
-  <a href="/assets/images/travel/IMG_0908.HEIC"><img src="/assets/images/travel/IMG_0908.HEIC" alt="旅遊照片 5"></a>
-  <a href="/assets/images/travel/IMG_1150.HEIC"><img src="/assets/images/travel/IMG_1150.HEIC" alt="旅遊照片 6"></a>
-  <a href="/assets/images/travel/IMG_1159.HEIC"><img src="/assets/images/travel/IMG_1159.HEIC" alt="旅遊照片 7"></a>
-  <a href="/assets/images/travel/IMG_9261.HEIC"><img src="/assets/images/travel/IMG_9261.HEIC" alt="旅遊照片 8"></a>
-  <a href="/assets/images/travel/IMG_9350.HEIC"><img src="/assets/images/travel/IMG_9350.HEIC" alt="旅遊照片 9"></a>
-  <a href="/assets/images/travel/IMG_9749.HEIC"><img src="/assets/images/travel/IMG_9749.HEIC" alt="旅遊照片 10"></a>
-  <a href="/assets/images/travel/IMG_9917.HEIC"><img src="/assets/images/travel/IMG_9917.HEIC" alt="旅遊照片 11"></a>
+  <a href="/assets/images/travel/IMG_0074.HEIC"><img class="heic-photo" src="/assets/images/travel/IMG_0074.HEIC" data-heic="/assets/images/travel/IMG_0074.HEIC" alt="旅遊照片 1" loading="lazy"></a>
+  <a href="/assets/images/travel/IMG_0104.HEIC"><img class="heic-photo" src="/assets/images/travel/IMG_0104.HEIC" data-heic="/assets/images/travel/IMG_0104.HEIC" alt="旅遊照片 2" loading="lazy"></a>
+  <a href="/assets/images/travel/IMG_0286.HEIC"><img class="heic-photo" src="/assets/images/travel/IMG_0286.HEIC" data-heic="/assets/images/travel/IMG_0286.HEIC" alt="旅遊照片 3" loading="lazy"></a>
+  <a href="/assets/images/travel/IMG_0554.HEIC"><img class="heic-photo" src="/assets/images/travel/IMG_0554.HEIC" data-heic="/assets/images/travel/IMG_0554.HEIC" alt="旅遊照片 4" loading="lazy"></a>
+  <a href="/assets/images/travel/IMG_0908.HEIC"><img class="heic-photo" src="/assets/images/travel/IMG_0908.HEIC" data-heic="/assets/images/travel/IMG_0908.HEIC" alt="旅遊照片 5" loading="lazy"></a>
+  <a href="/assets/images/travel/IMG_1150.HEIC"><img class="heic-photo" src="/assets/images/travel/IMG_1150.HEIC" data-heic="/assets/images/travel/IMG_1150.HEIC" alt="旅遊照片 6" loading="lazy"></a>
+  <a href="/assets/images/travel/IMG_1159.HEIC"><img class="heic-photo" src="/assets/images/travel/IMG_1159.HEIC" data-heic="/assets/images/travel/IMG_1159.HEIC" alt="旅遊照片 7" loading="lazy"></a>
+  <a href="/assets/images/travel/IMG_9261.HEIC"><img class="heic-photo" src="/assets/images/travel/IMG_9261.HEIC" data-heic="/assets/images/travel/IMG_9261.HEIC" alt="旅遊照片 8" loading="lazy"></a>
+  <a href="/assets/images/travel/IMG_9350.HEIC"><img class="heic-photo" src="/assets/images/travel/IMG_9350.HEIC" data-heic="/assets/images/travel/IMG_9350.HEIC" alt="旅遊照片 9" loading="lazy"></a>
+  <a href="/assets/images/travel/IMG_9749.HEIC"><img class="heic-photo" src="/assets/images/travel/IMG_9749.HEIC" data-heic="/assets/images/travel/IMG_9749.HEIC" alt="旅遊照片 10" loading="lazy"></a>
+  <a href="/assets/images/travel/IMG_9917.HEIC"><img class="heic-photo" src="/assets/images/travel/IMG_9917.HEIC" data-heic="/assets/images/travel/IMG_9917.HEIC" alt="旅遊照片 11" loading="lazy"></a>
   <figcaption>旅遊照片相簿</figcaption>
 </figure>
+
+<script src="https://cdn.jsdelivr.net/npm/heic2any/dist/heic2any.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    if (!window.heic2any) {
+      return;
+    }
+
+    document.querySelectorAll(".heic-photo").forEach(async (img) => {
+      if (img.dataset.converted) {
+        return;
+      }
+
+      try {
+        const response = await fetch(img.dataset.heic);
+        const buffer = await response.arrayBuffer();
+        const convertedBlob = await window.heic2any({
+          blob: new Blob([buffer]),
+          toType: "image/jpeg",
+          quality: 0.85,
+        });
+        const blobUrl = URL.createObjectURL(convertedBlob);
+        img.src = blobUrl;
+        img.dataset.converted = "true";
+      } catch (error) {
+        console.warn("HEIC conversion failed", error);
+      }
+    });
+  });
+</script>
 
 ## 相簿連結
 
