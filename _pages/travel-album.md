@@ -53,9 +53,22 @@ gallery:
     title: "旅遊照片 11"
 ---
 
-這裡整理了你剛上傳的旅遊照片相簿，點擊縮圖可查看原圖。
+從晨光到夜色，把路上的風景都收進這一頁。每一張照片都是一次出走的片刻，點開就是當時的溫度與心情。
 
-{% include gallery caption="旅遊照片相簿" %}
+<figure class="third">
+  <a href="/assets/images/travel/IMG_0074.HEIC"><img src="/assets/images/travel/IMG_0074.HEIC" alt="旅遊照片 1"></a>
+  <a href="/assets/images/travel/IMG_0104.HEIC"><img src="/assets/images/travel/IMG_0104.HEIC" alt="旅遊照片 2"></a>
+  <a href="/assets/images/travel/IMG_0286.HEIC"><img src="/assets/images/travel/IMG_0286.HEIC" alt="旅遊照片 3"></a>
+  <a href="/assets/images/travel/IMG_0554.HEIC"><img src="/assets/images/travel/IMG_0554.HEIC" alt="旅遊照片 4"></a>
+  <a href="/assets/images/travel/IMG_0908.HEIC"><img src="/assets/images/travel/IMG_0908.HEIC" alt="旅遊照片 5"></a>
+  <a href="/assets/images/travel/IMG_1150.HEIC"><img src="/assets/images/travel/IMG_1150.HEIC" alt="旅遊照片 6"></a>
+  <a href="/assets/images/travel/IMG_1159.HEIC"><img src="/assets/images/travel/IMG_1159.HEIC" alt="旅遊照片 7"></a>
+  <a href="/assets/images/travel/IMG_9261.HEIC"><img src="/assets/images/travel/IMG_9261.HEIC" alt="旅遊照片 8"></a>
+  <a href="/assets/images/travel/IMG_9350.HEIC"><img src="/assets/images/travel/IMG_9350.HEIC" alt="旅遊照片 9"></a>
+  <a href="/assets/images/travel/IMG_9749.HEIC"><img src="/assets/images/travel/IMG_9749.HEIC" alt="旅遊照片 10"></a>
+  <a href="/assets/images/travel/IMG_9917.HEIC"><img src="/assets/images/travel/IMG_9917.HEIC" alt="旅遊照片 11"></a>
+  <figcaption>旅遊照片相簿</figcaption>
+</figure>
 
 ## 相簿連結
 
