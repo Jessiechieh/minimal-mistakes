@@ -109,18 +109,15 @@ gallery:
     cursor: zoom-in;
     width: 100%;
     display: inline-block;
-    break-inside: avoid;
+    margin: 0;
   }
 
   .album-grid {
-    max-width: 880px;
+    max-width: 960px;
     margin: 32px auto 0;
-    column-count: 3;
-    column-gap: 16px;
-  }
-
-  .album-grid .photo-button {
-    margin-bottom: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
   }
 
   .album-grid .photo-button img {
@@ -134,15 +131,15 @@ gallery:
 
   @media (max-width: 1024px) {
     .album-grid {
-      max-width: 640px;
-      column-count: 2;
+      max-width: 720px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 
   @media (max-width: 640px) {
     .album-grid {
       max-width: 100%;
-      column-count: 1;
+      grid-template-columns: 1fr;
     }
   }
 
