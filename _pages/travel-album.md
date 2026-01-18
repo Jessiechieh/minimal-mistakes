@@ -102,17 +102,3 @@ gallery:
     });
   });
 </script>
-
-## 相簿連結
-
-- [旅遊照片 1]({{ travel_images }}/IMG_0074.HEIC)
-- [旅遊照片 2]({{ travel_images }}/IMG_0104.HEIC)
-- [旅遊照片 3]({{ travel_images }}/IMG_0286.HEIC)
-- [旅遊照片 4]({{ travel_images }}/IMG_0554.HEIC)
-- [旅遊照片 5]({{ travel_images }}/IMG_0908.HEIC)
-- [旅遊照片 6]({{ travel_images }}/IMG_1150.HEIC)
-- [旅遊照片 7]({{ travel_images }}/IMG_1159.HEIC)
-- [旅遊照片 8]({{ travel_images }}/IMG_9261.HEIC)
-- [旅遊照片 9]({{ travel_images }}/IMG_9350.HEIC)
-- [旅遊照片 10]({{ travel_images }}/IMG_9749.HEIC)
-- [旅遊照片 11]({{ travel_images }}/IMG_9917.HEIC)
