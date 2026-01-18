@@ -57,18 +57,19 @@ gallery:
 
 若你的瀏覽器暫時不支援 HEIC 格式，本頁會嘗試自動轉成可顯示的格式，讓你可以正常瀏覽每張照片。
 
+{% assign travel_images = "/assets/images/travel" | relative_url %}
 <figure class="third">
-  <a href="/assets/images/travel/IMG_0074.HEIC"><img class="heic-photo" src="/assets/images/travel/IMG_0074.HEIC" data-heic="/assets/images/travel/IMG_0074.HEIC" alt="旅遊照片 1" loading="lazy"></a>
-  <a href="/assets/images/travel/IMG_0104.HEIC"><img class="heic-photo" src="/assets/images/travel/IMG_0104.HEIC" data-heic="/assets/images/travel/IMG_0104.HEIC" alt="旅遊照片 2" loading="lazy"></a>
-  <a href="/assets/images/travel/IMG_0286.HEIC"><img class="heic-photo" src="/assets/images/travel/IMG_0286.HEIC" data-heic="/assets/images/travel/IMG_0286.HEIC" alt="旅遊照片 3" loading="lazy"></a>
-  <a href="/assets/images/travel/IMG_0554.HEIC"><img class="heic-photo" src="/assets/images/travel/IMG_0554.HEIC" data-heic="/assets/images/travel/IMG_0554.HEIC" alt="旅遊照片 4" loading="lazy"></a>
-  <a href="/assets/images/travel/IMG_0908.HEIC"><img class="heic-photo" src="/assets/images/travel/IMG_0908.HEIC" data-heic="/assets/images/travel/IMG_0908.HEIC" alt="旅遊照片 5" loading="lazy"></a>
-  <a href="/assets/images/travel/IMG_1150.HEIC"><img class="heic-photo" src="/assets/images/travel/IMG_1150.HEIC" data-heic="/assets/images/travel/IMG_1150.HEIC" alt="旅遊照片 6" loading="lazy"></a>
-  <a href="/assets/images/travel/IMG_1159.HEIC"><img class="heic-photo" src="/assets/images/travel/IMG_1159.HEIC" data-heic="/assets/images/travel/IMG_1159.HEIC" alt="旅遊照片 7" loading="lazy"></a>
-  <a href="/assets/images/travel/IMG_9261.HEIC"><img class="heic-photo" src="/assets/images/travel/IMG_9261.HEIC" data-heic="/assets/images/travel/IMG_9261.HEIC" alt="旅遊照片 8" loading="lazy"></a>
-  <a href="/assets/images/travel/IMG_9350.HEIC"><img class="heic-photo" src="/assets/images/travel/IMG_9350.HEIC" data-heic="/assets/images/travel/IMG_9350.HEIC" alt="旅遊照片 9" loading="lazy"></a>
-  <a href="/assets/images/travel/IMG_9749.HEIC"><img class="heic-photo" src="/assets/images/travel/IMG_9749.HEIC" data-heic="/assets/images/travel/IMG_9749.HEIC" alt="旅遊照片 10" loading="lazy"></a>
-  <a href="/assets/images/travel/IMG_9917.HEIC"><img class="heic-photo" src="/assets/images/travel/IMG_9917.HEIC" data-heic="/assets/images/travel/IMG_9917.HEIC" alt="旅遊照片 11" loading="lazy"></a>
+  <a href="{{ travel_images }}/IMG_0074.HEIC"><img class="heic-photo" src="{{ travel_images }}/IMG_0074.HEIC" data-heic="{{ travel_images }}/IMG_0074.HEIC" alt="旅遊照片 1" loading="lazy"></a>
+  <a href="{{ travel_images }}/IMG_0104.HEIC"><img class="heic-photo" src="{{ travel_images }}/IMG_0104.HEIC" data-heic="{{ travel_images }}/IMG_0104.HEIC" alt="旅遊照片 2" loading="lazy"></a>
+  <a href="{{ travel_images }}/IMG_0286.HEIC"><img class="heic-photo" src="{{ travel_images }}/IMG_0286.HEIC" data-heic="{{ travel_images }}/IMG_0286.HEIC" alt="旅遊照片 3" loading="lazy"></a>
+  <a href="{{ travel_images }}/IMG_0554.HEIC"><img class="heic-photo" src="{{ travel_images }}/IMG_0554.HEIC" data-heic="{{ travel_images }}/IMG_0554.HEIC" alt="旅遊照片 4" loading="lazy"></a>
+  <a href="{{ travel_images }}/IMG_0908.HEIC"><img class="heic-photo" src="{{ travel_images }}/IMG_0908.HEIC" data-heic="{{ travel_images }}/IMG_0908.HEIC" alt="旅遊照片 5" loading="lazy"></a>
+  <a href="{{ travel_images }}/IMG_1150.HEIC"><img class="heic-photo" src="{{ travel_images }}/IMG_1150.HEIC" data-heic="{{ travel_images }}/IMG_1150.HEIC" alt="旅遊照片 6" loading="lazy"></a>
+  <a href="{{ travel_images }}/IMG_1159.HEIC"><img class="heic-photo" src="{{ travel_images }}/IMG_1159.HEIC" data-heic="{{ travel_images }}/IMG_1159.HEIC" alt="旅遊照片 7" loading="lazy"></a>
+  <a href="{{ travel_images }}/IMG_9261.HEIC"><img class="heic-photo" src="{{ travel_images }}/IMG_9261.HEIC" data-heic="{{ travel_images }}/IMG_9261.HEIC" alt="旅遊照片 8" loading="lazy"></a>
+  <a href="{{ travel_images }}/IMG_9350.HEIC"><img class="heic-photo" src="{{ travel_images }}/IMG_9350.HEIC" data-heic="{{ travel_images }}/IMG_9350.HEIC" alt="旅遊照片 9" loading="lazy"></a>
+  <a href="{{ travel_images }}/IMG_9749.HEIC"><img class="heic-photo" src="{{ travel_images }}/IMG_9749.HEIC" data-heic="{{ travel_images }}/IMG_9749.HEIC" alt="旅遊照片 10" loading="lazy"></a>
+  <a href="{{ travel_images }}/IMG_9917.HEIC"><img class="heic-photo" src="{{ travel_images }}/IMG_9917.HEIC" data-heic="{{ travel_images }}/IMG_9917.HEIC" alt="旅遊照片 11" loading="lazy"></a>
   <figcaption>旅遊照片相簿</figcaption>
 </figure>
 
@@ -104,14 +105,14 @@ gallery:
 
 ## 相簿連結
 
-- [旅遊照片 1](/assets/images/travel/IMG_0074.HEIC)
-- [旅遊照片 2](/assets/images/travel/IMG_0104.HEIC)
-- [旅遊照片 3](/assets/images/travel/IMG_0286.HEIC)
-- [旅遊照片 4](/assets/images/travel/IMG_0554.HEIC)
-- [旅遊照片 5](/assets/images/travel/IMG_0908.HEIC)
-- [旅遊照片 6](/assets/images/travel/IMG_1150.HEIC)
-- [旅遊照片 7](/assets/images/travel/IMG_1159.HEIC)
-- [旅遊照片 8](/assets/images/travel/IMG_9261.HEIC)
-- [旅遊照片 9](/assets/images/travel/IMG_9350.HEIC)
-- [旅遊照片 10](/assets/images/travel/IMG_9749.HEIC)
-- [旅遊照片 11](/assets/images/travel/IMG_9917.HEIC)
+- [旅遊照片 1]({{ travel_images }}/IMG_0074.HEIC)
+- [旅遊照片 2]({{ travel_images }}/IMG_0104.HEIC)
+- [旅遊照片 3]({{ travel_images }}/IMG_0286.HEIC)
+- [旅遊照片 4]({{ travel_images }}/IMG_0554.HEIC)
+- [旅遊照片 5]({{ travel_images }}/IMG_0908.HEIC)
+- [旅遊照片 6]({{ travel_images }}/IMG_1150.HEIC)
+- [旅遊照片 7]({{ travel_images }}/IMG_1159.HEIC)
+- [旅遊照片 8]({{ travel_images }}/IMG_9261.HEIC)
+- [旅遊照片 9]({{ travel_images }}/IMG_9350.HEIC)
+- [旅遊照片 10]({{ travel_images }}/IMG_9749.HEIC)
+- [旅遊照片 11]({{ travel_images }}/IMG_9917.HEIC)
