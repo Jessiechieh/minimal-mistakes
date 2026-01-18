@@ -55,23 +55,105 @@ gallery:
 
 從晨光到夜色，把路上的風景都收進這一頁。每一張照片都是一次出走的片刻，點開就是當時的溫度與心情。
 
-若你的瀏覽器暫時不支援 HEIC 格式，本頁會嘗試自動轉成可顯示的格式，讓你可以正常瀏覽每張照片。
-
 {% assign travel_images = "/assets/images/travel" | relative_url %}
 <figure class="third">
-  <a href="{{ travel_images }}/IMG_0074.HEIC"><img class="heic-photo" src="{{ travel_images }}/IMG_0074.HEIC" data-heic="{{ travel_images }}/IMG_0074.HEIC" alt="旅遊照片 1" loading="lazy"></a>
-  <a href="{{ travel_images }}/IMG_0104.HEIC"><img class="heic-photo" src="{{ travel_images }}/IMG_0104.HEIC" data-heic="{{ travel_images }}/IMG_0104.HEIC" alt="旅遊照片 2" loading="lazy"></a>
-  <a href="{{ travel_images }}/IMG_0286.HEIC"><img class="heic-photo" src="{{ travel_images }}/IMG_0286.HEIC" data-heic="{{ travel_images }}/IMG_0286.HEIC" alt="旅遊照片 3" loading="lazy"></a>
-  <a href="{{ travel_images }}/IMG_0554.HEIC"><img class="heic-photo" src="{{ travel_images }}/IMG_0554.HEIC" data-heic="{{ travel_images }}/IMG_0554.HEIC" alt="旅遊照片 4" loading="lazy"></a>
-  <a href="{{ travel_images }}/IMG_0908.HEIC"><img class="heic-photo" src="{{ travel_images }}/IMG_0908.HEIC" data-heic="{{ travel_images }}/IMG_0908.HEIC" alt="旅遊照片 5" loading="lazy"></a>
-  <a href="{{ travel_images }}/IMG_1150.HEIC"><img class="heic-photo" src="{{ travel_images }}/IMG_1150.HEIC" data-heic="{{ travel_images }}/IMG_1150.HEIC" alt="旅遊照片 6" loading="lazy"></a>
-  <a href="{{ travel_images }}/IMG_1159.HEIC"><img class="heic-photo" src="{{ travel_images }}/IMG_1159.HEIC" data-heic="{{ travel_images }}/IMG_1159.HEIC" alt="旅遊照片 7" loading="lazy"></a>
-  <a href="{{ travel_images }}/IMG_9261.HEIC"><img class="heic-photo" src="{{ travel_images }}/IMG_9261.HEIC" data-heic="{{ travel_images }}/IMG_9261.HEIC" alt="旅遊照片 8" loading="lazy"></a>
-  <a href="{{ travel_images }}/IMG_9350.HEIC"><img class="heic-photo" src="{{ travel_images }}/IMG_9350.HEIC" data-heic="{{ travel_images }}/IMG_9350.HEIC" alt="旅遊照片 9" loading="lazy"></a>
-  <a href="{{ travel_images }}/IMG_9749.HEIC"><img class="heic-photo" src="{{ travel_images }}/IMG_9749.HEIC" data-heic="{{ travel_images }}/IMG_9749.HEIC" alt="旅遊照片 10" loading="lazy"></a>
-  <a href="{{ travel_images }}/IMG_9917.HEIC"><img class="heic-photo" src="{{ travel_images }}/IMG_9917.HEIC" data-heic="{{ travel_images }}/IMG_9917.HEIC" alt="旅遊照片 11" loading="lazy"></a>
+  <button class="photo-button" type="button">
+    <img class="heic-photo" src="{{ travel_images }}/IMG_0074.HEIC" data-heic="{{ travel_images }}/IMG_0074.HEIC" alt="旅遊照片 1" loading="lazy">
+  </button>
+  <button class="photo-button" type="button">
+    <img class="heic-photo" src="{{ travel_images }}/IMG_0104.HEIC" data-heic="{{ travel_images }}/IMG_0104.HEIC" alt="旅遊照片 2" loading="lazy">
+  </button>
+  <button class="photo-button" type="button">
+    <img class="heic-photo" src="{{ travel_images }}/IMG_0286.HEIC" data-heic="{{ travel_images }}/IMG_0286.HEIC" alt="旅遊照片 3" loading="lazy">
+  </button>
+  <button class="photo-button" type="button">
+    <img class="heic-photo" src="{{ travel_images }}/IMG_0554.HEIC" data-heic="{{ travel_images }}/IMG_0554.HEIC" alt="旅遊照片 4" loading="lazy">
+  </button>
+  <button class="photo-button" type="button">
+    <img class="heic-photo" src="{{ travel_images }}/IMG_0908.HEIC" data-heic="{{ travel_images }}/IMG_0908.HEIC" alt="旅遊照片 5" loading="lazy">
+  </button>
+  <button class="photo-button" type="button">
+    <img class="heic-photo" src="{{ travel_images }}/IMG_1150.HEIC" data-heic="{{ travel_images }}/IMG_1150.HEIC" alt="旅遊照片 6" loading="lazy">
+  </button>
+  <button class="photo-button" type="button">
+    <img class="heic-photo" src="{{ travel_images }}/IMG_1159.HEIC" data-heic="{{ travel_images }}/IMG_1159.HEIC" alt="旅遊照片 7" loading="lazy">
+  </button>
+  <button class="photo-button" type="button">
+    <img class="heic-photo" src="{{ travel_images }}/IMG_9261.HEIC" data-heic="{{ travel_images }}/IMG_9261.HEIC" alt="旅遊照片 8" loading="lazy">
+  </button>
+  <button class="photo-button" type="button">
+    <img class="heic-photo" src="{{ travel_images }}/IMG_9350.HEIC" data-heic="{{ travel_images }}/IMG_9350.HEIC" alt="旅遊照片 9" loading="lazy">
+  </button>
+  <button class="photo-button" type="button">
+    <img class="heic-photo" src="{{ travel_images }}/IMG_9749.HEIC" data-heic="{{ travel_images }}/IMG_9749.HEIC" alt="旅遊照片 10" loading="lazy">
+  </button>
+  <button class="photo-button" type="button">
+    <img class="heic-photo" src="{{ travel_images }}/IMG_9917.HEIC" data-heic="{{ travel_images }}/IMG_9917.HEIC" alt="旅遊照片 11" loading="lazy">
+  </button>
   <figcaption>旅遊照片相簿</figcaption>
 </figure>
+
+<div class="album-modal" hidden>
+  <div class="album-modal__backdrop" data-album-close></div>
+  <div class="album-modal__content" role="dialog" aria-modal="true" aria-label="放大檢視照片">
+    <button class="album-modal__close" type="button" data-album-close aria-label="關閉照片">×</button>
+    <img class="album-modal__image" alt="">
+  </div>
+</div>
+
+<style>
+  .photo-button {
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: zoom-in;
+  }
+
+  .album-modal[hidden] {
+    display: none;
+  }
+
+  .album-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+  }
+
+  .album-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+  }
+
+  .album-modal__content {
+    position: absolute;
+    inset: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .album-modal__image {
+    max-width: 90vw;
+    max-height: 90vh;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+  }
+
+  .album-modal__close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: 0;
+    border-radius: 999px;
+    width: 36px;
+    height: 36px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+</style>
 
 <script src="https://cdn.jsdelivr.net/npm/heic2any/dist/heic2any.min.js"></script>
 <script>
@@ -98,6 +180,43 @@ gallery:
         img.dataset.converted = "true";
       } catch (error) {
         console.warn("HEIC conversion failed", error);
+      }
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.querySelector(".album-modal");
+    const modalImage = modal?.querySelector(".album-modal__image");
+    const closeTargets = modal?.querySelectorAll("[data-album-close]") ?? [];
+
+    if (!modal || !modalImage) {
+      return;
+    }
+
+    document.querySelectorAll(".photo-button img").forEach((img) => {
+      img.addEventListener("click", () => {
+        modalImage.src = img.currentSrc || img.src;
+        modalImage.alt = img.alt;
+        modal.hidden = false;
+        document.body.style.overflow = "hidden";
+      });
+    });
+
+    closeTargets.forEach((target) => {
+      target.addEventListener("click", () => {
+        modal.hidden = true;
+        modalImage.src = "";
+        document.body.style.overflow = "";
+      });
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !modal.hidden) {
+        modal.hidden = true;
+        modalImage.src = "";
+        document.body.style.overflow = "";
       }
     });
   });
