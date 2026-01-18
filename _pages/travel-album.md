@@ -56,7 +56,7 @@ gallery:
 從晨光到夜色，把路上的風景都收進這一頁。每一張照片都是一次出走的片刻，點開就是當時的溫度與心情。
 
 {% assign travel_images = "/assets/images/travel" | relative_url %}
-<figure class="third">
+<figure class="album-grid">
   <button class="photo-button" type="button">
     <img class="heic-photo" src="{{ travel_images }}/IMG_0074.HEIC" data-heic="{{ travel_images }}/IMG_0074.HEIC" alt="旅遊照片 1" loading="lazy">
   </button>
@@ -107,6 +107,37 @@ gallery:
     border: 0;
     padding: 0;
     cursor: zoom-in;
+    width: 100%;
+    display: inline-block;
+  }
+
+  .album-grid {
+    column-count: 3;
+    column-gap: 20px;
+  }
+
+  .album-grid .photo-button {
+    margin-bottom: 20px;
+  }
+
+  .album-grid .photo-button img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  @media (max-width: 1024px) {
+    .album-grid {
+      column-count: 2;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .album-grid {
+      column-count: 1;
+    }
   }
 
   .album-modal[hidden] {
@@ -144,14 +175,16 @@ gallery:
     position: absolute;
     top: 12px;
     right: 16px;
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    border: 0;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.95);
+    color: #111;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 999px;
     width: 36px;
     height: 36px;
     font-size: 24px;
     cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
   }
 </style>
 
