@@ -109,15 +109,18 @@ gallery:
     cursor: zoom-in;
     width: 100%;
     display: inline-block;
+    break-inside: avoid;
   }
 
   .album-grid {
+    max-width: 880px;
+    margin: 32px auto 0;
     column-count: 3;
-    column-gap: 20px;
+    column-gap: 16px;
   }
 
   .album-grid .photo-button {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 
   .album-grid .photo-button img {
@@ -126,16 +129,19 @@ gallery:
     display: block;
     border-radius: 12px;
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
   }
 
   @media (max-width: 1024px) {
     .album-grid {
+      max-width: 640px;
       column-count: 2;
     }
   }
 
   @media (max-width: 640px) {
     .album-grid {
+      max-width: 100%;
       column-count: 1;
     }
   }
